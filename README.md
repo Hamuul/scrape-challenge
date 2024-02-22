@@ -51,4 +51,10 @@ but try to optimize file I/O and leverage concurrency to improve
 performance.
 - Switch from writing to .txt to writing to .csv
 
-
+#### Miscellanous
+- Fine-tuning of parameters like ```timeout, chunk_size,
+NUM_DRIVERS``` may net better performance but they require 
+very thorough and broad profiling which is time-consuming 
+in itself.
+- The scraper would probably benefit from being ported
+to a faster language like Java / C#.
