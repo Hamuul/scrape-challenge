@@ -95,7 +95,6 @@ async def main():
         browser = await p.chromium.launch(
             headless=True,
             ignore_default_args=[
-                "--no-sandbox",
                 "--log-level=0",
                 "--in-process-gpu",
                 "--enable-automation",
