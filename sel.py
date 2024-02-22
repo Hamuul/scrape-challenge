@@ -57,11 +57,8 @@ def extract_desired_fields(url, driver):
 
 
 async def main():
-    idx = 0
     for link, driver in zip(await convert(["extracted0.xml", "extracted1.xml"]), cycle(drivers)):
-        extract_desired_fields(link, driver[idx])
-        idx += 1
-        idx %= NUM_DRIVERS
+        extract_desired_fields(link, driver)
 
 
 asyncio.run(main())
