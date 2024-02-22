@@ -49,7 +49,7 @@ def extract_desired_fields(url, driver):
         print(
             f'{json_dict["productName"]}\n{json_dict["brandKey"]}\n{price}eur\n'
             f'{json_dict["gtin"]}\n')
-    except KeyError:
+    except KeyError:  # sometimes brandKey is missing (when product is only in xml)
         idx = json_dict["slug"].find("-")
         print(
             f'{json_dict["productName"]}\n{json_dict["slug"][:idx]}\n{price}eur\n'

@@ -5,7 +5,9 @@ from fake_useragent import UserAgent
 
 urls = ["https://shop.rewe.de/sitemaps/sitemap-shop-produkte.xml",
         "https://shop.rewe.de/sitemaps/sitemap-shop-produkte_1.xml"]
-def write_xmls_to_disk(urls:list[str]):
+
+
+def write_xmls_to_disk(urls : list[str]):
     fopt = FirefoxOptions()
     ua = UserAgent()
 

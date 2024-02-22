@@ -9,11 +9,3 @@ async def convert_xmls_to_prodlink_generator(filenames):
     product_link_gen = (subpart["loc"] for part in xml_content
                                         for subpart in part["urlset"]["url"])
     return product_link_gen
-
-
-### sanity test
-# async def main():
-#   for link in await convert_xmls_to_prodlink_generator(["extracted0.xml", "extracted1.xml"]):
-#       print(link)
-#
-# asyncio.run(main())
