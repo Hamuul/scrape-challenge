@@ -57,4 +57,9 @@ NUM_DRIVERS``` may net better performance but they require
 very thorough and broad profiling which is time-consuming 
 in itself.
 - The scraper would probably benefit from being ported
-to a faster language like Java / C#.
+to a faster language like Java / C#. It felt really hard 
+to go above an average ~5 products details extracted and
+written to disk per second.
+- Though some products are not currently in stock, their details
+are still available in the HTML source, though not rendered. I 
+have chosen to keep track of them too.
