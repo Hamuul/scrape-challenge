@@ -114,7 +114,7 @@ async def main():
             *[task(browser, chunk) for chunk in chunked_list]
         )
         # pypeln may perform better in some scenarios / with certain parameters
-        # stage = pl.task.map(partial(task, context), chunked_list, workers=6)
+        # stage = pl.task.map(partial(task, browser), chunked_list, workers=6)
         # await stage
 
 
