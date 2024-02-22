@@ -111,8 +111,9 @@ async def main():
         for i in range(0, num_links, chunk_size):
             chunked_list.append(link_gen[i: i + chunk_size])
         await asyncio.gather(
-            *[task(browser, chunked_list[i]) for i in range(len(chunked_list))]
+            *[task(browser, chunk) for chunk in chunked_list]
         )
+        # pypeln may perform better in some scenarios / with certain parameters
         # stage = pl.task.map(partial(task, context), chunked_list, workers=6)
         # await stage
 
