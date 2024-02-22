@@ -2,6 +2,8 @@
 **Prerequisites:**
 * Ensure you have already executed `python3 get_xmls.py` or obtained the necessary `.xml` files and placed them in the current directory.
 
+#### Scraping results are in products.txt for selenium and pw/full.csv for playwright
+
 **Option 1: Docker container**
 
 1. Download the Dockerfile and :
@@ -50,7 +52,7 @@ but this may hurt performance
 - 
 ### Selenium solution 
 
-- Tryin selenium, the headless webdriver can thankfully
+- Trying selenium, the headless webdriver can thankfully
 access any page of the marketplace, and avoids 403 and captcha.
 - Fetch the xml files which contain all product urls with selenium
  and parse them into a collection (list/generator), stripping whatever
