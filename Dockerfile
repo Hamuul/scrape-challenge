@@ -23,8 +23,9 @@ RUN pip install -r requirements.txt
 
 # Install Playwright browsers
 RUN playwright install chromium && playwright install-deps
+RUN mv products.txt products.txt.bak && mv pw/full.csv pw/full.csv.bak
 # Clone the scrape-challenge repository
-RUN python3 scripts/pw/get_xmls.py
+RUN python3 get_xmls.py && cp *.xml pw/
 
 # Run the main script or entrypoint of your application
 CMD [ "/bin/bash"]
