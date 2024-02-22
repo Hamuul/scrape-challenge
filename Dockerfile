@@ -19,7 +19,7 @@ RUN git clone https://${GITHUB_PAT}@github.com/Hamuul/scrape-challenge
 
 WORKDIR /scrape-challenge
 # Install required python libraries
-RUN pip install asyncio uvloop pypeln ujson aiofiles aiocsv fake_useragent pytest-playwright lxml cssselect selenium xmltodict
+RUN pip install -r requirements.txt
 
 # Install Playwright browsers
 RUN playwright install chromium && playwright install-deps
