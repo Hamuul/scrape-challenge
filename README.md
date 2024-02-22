@@ -50,7 +50,7 @@ but this may hurt performance
 - 
 ### Selenium solution 
 
-- Tryin selenium, the headless webdriver can thankfully
+- Trying selenium, the headless webdriver can thankfully
 access any page of the marketplace, and avoids 403 and captcha.
 - Fetch the xml files which contain all product urls with selenium
  and parse them into a collection (list/generator), stripping whatever
