@@ -1,3 +1,25 @@
+### Running :
+**Prerequisites:**
+* Ensure you have already executed `python3 get_xmls.py` or obtained the necessary `.xml` files and placed them in the current directory.
+
+**Option 1: Docker container**
+
+1. Download the Dockerfile and :
+   ```bash
+   wget [https://raw.githubusercontent.com/Hamuul/scrape-challenge/master/Dockerfile](https://raw.githubusercontent.com/Hamuul/scrape-challenge/master/Dockerfile)
+   buildx build --network=host --tag rewe_scraper .
+
+**Option 2: Native**
+
+1. Clone the repo:
+    ```bash
+    git clone https://github.com/Hamuul/sphereMonitor.git
+2.  Deal with system dependencies (example is for apt-based distros):
+    ```bash
+    pip install -r requirements.txt
+    playwright install chromium && playwright install-deps
+    sudo apt install libxml2-dev lixbxslt-dev -y 
+
 ### Initial mapping/analysis of problem:
 
 - After some digging we find that ```http://shop.rewe.de```
