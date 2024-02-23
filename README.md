@@ -1,6 +1,6 @@
 ### Running :
 **Prerequisites:**
-* Ensure you have already executed `python3 get_xmls.py` or obtained the necessary `.xml` files and placed them in the current directory.
+* Ensure you have already executed `python3 get_xmls.py` or obtained the necessary `.xml` files and placed them in the current directory. Then run ```python3 sel.py``` or ```python3 playwright_scraper.py``` and sit back for a few hours.
 
 #### Scraping results are in products.txt for selenium and pw/full.csv for playwright
 
