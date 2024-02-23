@@ -75,6 +75,10 @@ but try to optimize file I/O and leverage concurrency to improve
 performance.
 - Switch from writing to .txt to writing to .csv
 
+### curl-impersonate + ripgrep + jq + xargs
+- Needs to run from WSL in Windows' filesystem hierarchy. Sounds bad but it's the fastest solution, upwards of 100 requests/second.
+- Only this specific curl client works, others will return 403 / face captcha.
+
 #### Miscellanous
 - Fine-tuning of parameters like ```timeout, chunk_size,
 NUM_DRIVERS``` may net better performance but they require 
