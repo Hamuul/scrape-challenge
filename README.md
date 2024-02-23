@@ -36,6 +36,9 @@ when trying to fetch the HTML source. Furthermore, if the site
 suspects programmatic access of any kind, it requests a captcha
 which is a significant hindrance to scraping.
 
+- Some searching reveals that there is an API available ```https://shop.rewe.de/api/products?market=<market_id>&objectsPerPage=<num>``` however using it would beat the purpose of a scraper. It also might
+  rate limit scripts, but I have not tested that.
+  
 ### Scraping product details
 - We use LXML package because it generally offers the best parsing performance
 in python.
@@ -49,7 +52,7 @@ scrape.
 - We can also scrape the already formatted price with a CSS selector ```#pdpr-ProductIinformation``` + Xpath
 expression ```//meso-data[@data-context="product-detail"]```
 but this may hurt performance
-- 
+  
 ### Selenium solution 
 
 - Trying selenium, the headless webdriver can thankfully
