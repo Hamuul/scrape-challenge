@@ -8,7 +8,7 @@
 
 1. Download the Dockerfile and :
    ```bash
-   wget [https://raw.githubusercontent.com/Hamuul/scrape-challenge/master/Dockerfile](https://raw.githubusercontent.com/Hamuul/scrape-challenge/master/Dockerfile)
+   wget https://raw.githubusercontent.com/Hamuul/scrape-challenge/master/Dockerfile
    buildx build --network=host --tag rewe_scraper .
 
 **Option 2: Native**
