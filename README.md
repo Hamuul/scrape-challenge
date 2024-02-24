@@ -9,7 +9,7 @@
 1. Download the Dockerfile and :
    ```bash
    wget https://raw.githubusercontent.com/Hamuul/scrape-challenge/master/Dockerfile
-   buildx build --network=host --tag rewe_scraper .
+   docker buildx build --network=host --tag rewe_scraper .
 
 **Option 2: Native**
 
@@ -30,8 +30,8 @@ there are 2 xml files which contain most/all products.
 However, upon trying to use ```cURL``` with various 
 user-agents and headers to spoof our scraper, we are faced with 403 Forbidden status codes.
 
-- Although they would greatly improve perforamnce, 403 is what
-```aiottp, requests``` and other popular python packages also return
+- Although they would greatly improve performance, 403 is what
+```aiottp, requests, httpx``` and other popular python packages also return
 when trying to fetch the HTML source. Furthermore, if the site
 suspects programmatic access of any kind, it requests a captcha
 which is a significant hindrance to scraping.
