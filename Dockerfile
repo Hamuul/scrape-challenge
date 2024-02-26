@@ -2,8 +2,6 @@
 FROM python:3.12-slim-bookworm
 
 # Install system dependencies
-ARG GITHUB_PAT
-
 RUN echo "deb http://deb.debian.org/debian/ unstable main contrib non-free" >> /etc/apt/sources.list.d/debian.list
 
 RUN apt update -y
